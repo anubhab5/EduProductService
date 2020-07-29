@@ -1,0 +1,24 @@
+server:
+  port: 0
+  error:
+    include-stacktrace: always
+  
+spring:
+  application:
+   name: product-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/miniamazon
+    username: root
+    password: admin    
+  jpa:
+   show-sql: true
+   generate-ddl: true
+   hibernate:
+      ddl-auto: update   
+  devtools:
+    restart:
+      enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka
